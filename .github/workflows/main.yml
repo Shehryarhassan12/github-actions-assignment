@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+name: CI-CD Pipeline
 
 on:
   push:
@@ -10,8 +10,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Display Message
-        run: echo "Hello from GitHub Actions!"
+      - name: Show Current Directory
+        run: pwd
+
+      - name: List Files
+        run: ls -la
+
+      - name: Make Directory
+        run: mkdir assignment-folder
+
+      - name: Echo Message
+        run: echo "I am learning Github Actions"
